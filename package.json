@@ -31,5 +31,13 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0"
+  },
+  "homepage": "https://github.com/dtinth/react-performance-coach#readme",
+  "bugs": {
+    "url": "https://github.com/dtinth/react-performance-coach#issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtinth/react-performance-coach.git"
   }
 }
