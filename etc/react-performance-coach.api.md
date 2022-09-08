@@ -4,6 +4,16 @@
 
 ```ts
 
+// @public (undocumented)
+export interface PerformanceCoachOptions {
+    // (undocumented)
+    enabled?: boolean;
+}
+
+// @public (undocumented)
+function usePerformanceCoach(options?: PerformanceCoachOptions): void;
+export default usePerformanceCoach;
+
 // (No @packageDocumentation comment for this package)
 
 ```
