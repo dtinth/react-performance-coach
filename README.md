@@ -53,3 +53,9 @@ It provides a hook `usePerformanceCoach` that causes your component to re-render
     Once optimized, there should be a smaller number of flashing boxes.
 
       <img width="1003" alt="image" src="https://user-images.githubusercontent.com/193136/189147472-dacfa6b2-d7cb-4f46-b225-d5bc0eaf948d.png">
+
+## API reference
+
+<https://apiref.page/package/react-performance-coach>
+
+[![API reference screenshot](https://ss.dt.in.th/api/screenshots/apiref-react-performance-coach.png)](https://apiref.page/package/react-performance-coach)
