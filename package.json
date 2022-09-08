@@ -1,0 +1,34 @@
+{
+  "name": "react-performance-coach",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test",
+    "prepare": "heft build && ./scripts/generate-api-docs",
+    "release": "./scripts/release",
+    "format": "prettier --write .",
+    "api": "./scripts/generate-api-docs"
+  },
+  "files": [
+    "src",
+    "lib",
+    "lib-commonjs",
+    "dist"
+  ],
+  "main": "./lib-commonjs/index.js",
+  "module": "./lib/index.js",
+  "types": "./dist/react-performance-coach.d.ts",
+  "docModel": "./dist/react-performance-coach.api.json",
+  "devDependencies": {
+    "@changesets/cli": "2.23.0",
+    "@rushstack/heft": "0.45.12",
+    "@rushstack/heft-web-rig": "0.10.15",
+    "@types/heft-jest": "1.0.3",
+    "@types/react": "^18.0.18",
+    "prettier": "2.7.1",
+    "react": ">=16.8.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
