@@ -4,13 +4,12 @@
 
 ```ts
 
-// @public (undocumented)
+// @public
 export interface PerformanceCoachOptions {
-    // (undocumented)
     enabled?: boolean;
 }
 
-// @public (undocumented)
+// @public
 function usePerformanceCoach(options?: PerformanceCoachOptions): void;
 export default usePerformanceCoach;
 
