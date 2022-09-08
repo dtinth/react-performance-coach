@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * @public
+ */
 export interface PerformanceCoachOptions {
   enabled?: boolean
 }
 
+/**
+ * @public
+ */
 export default function usePerformanceCoach(
   options: PerformanceCoachOptions = {},
 ) {
