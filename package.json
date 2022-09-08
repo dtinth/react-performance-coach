@@ -1,6 +1,6 @@
 {
   "name": "react-performance-coach",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "build": "heft build",
     "test": "heft test",
