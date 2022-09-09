@@ -4,15 +4,19 @@ A little library to help you write more performant React apps.
 
 It provides a hook `usePerformanceCoach` that causes your component to re-render itself every 1 second. Once you do this, you can use [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) to see which components are re-rendering needlessly. You can then use this information to optimize your app.
 
+Generally, it is fine to re-render a few _top-level components_ every second — if it doesn’t lead to a snowball effect where a top-level component causes the entire subtree to re-render itself.
+
+![image](https://user-images.githubusercontent.com/193136/189275695-313c5ab5-d2fc-4fd1-b882-cd5c3cd492cf.png)
+
 ## How to use
 
-1.  Install the package and [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+1.  Install the `react-performance-coach` package and install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) in your browser.
 
     ```bash
     yarn add react-performance-coach
     ```
 
-2.  In your main app component, use the `usePerformanceCoach` hook. component.
+2.  In your main app component, use the `usePerformanceCoach` hook.
 
     ```jsx
     import { usePerformanceCoach } from 'react-performance-coach'
