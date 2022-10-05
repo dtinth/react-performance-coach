@@ -20,7 +20,7 @@
   "types": "./dist/react-performance-coach.d.ts",
   "docModel": "./dist/react-performance-coach.api.json",
   "devDependencies": {
-    "@changesets/cli": "2.23.0",
+    "@changesets/cli": "2.25.0",
     "@rushstack/heft": "0.45.12",
     "@rushstack/heft-web-rig": "0.10.15",
     "@types/heft-jest": "1.0.3",
