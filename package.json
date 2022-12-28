@@ -21,8 +21,8 @@
   "docModel": "./dist/react-performance-coach.api.json",
   "devDependencies": {
     "@changesets/cli": "2.25.0",
-    "@rushstack/heft": "0.45.12",
-    "@rushstack/heft-web-rig": "0.10.15",
+    "@rushstack/heft": "0.48.7",
+    "@rushstack/heft-web-rig": "0.12.10",
     "@types/heft-jest": "1.0.3",
     "@types/node": "^18.7.16",
     "@types/react": "^18.0.18",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/dtinth/react-performance-coach#readme",
   "bugs": {
-    "url": "https://github.com/dtinth/react-performance-coach#issues"
+    "url": "https://github.com/dtinth/react-performance-coach/issues"
   },
   "repository": {
     "type": "git",
