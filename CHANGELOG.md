@@ -1,5 +1,11 @@
 # react-performance-coach
 
+## 2.0.0
+
+### Major Changes
+
+- db01f95: This package is now ESM-only
+
 ## 1.1.0
 
 ### Minor Changes
