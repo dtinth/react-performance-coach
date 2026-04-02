@@ -19,10 +19,10 @@ Generally, it is fine to re-render a few _top-level components_ every second —
 2.  In your main app component, use the `usePerformanceCoach` hook.
 
     ```jsx
-    import { usePerformanceCoach } from 'react-performance-coach'
+    import { usePerformanceCoach } from "react-performance-coach";
 
     export default function App() {
-      usePerformanceCoach()
+      usePerformanceCoach();
       // ...
     }
     ```
@@ -30,10 +30,10 @@ Generally, it is fine to re-render a few _top-level components_ every second —
 3.  In the page component that you want to optimize, use the `usePerformanceCoach` hook.
 
     ```jsx
-    import { usePerformanceCoach } from 'react-performance-coach'
+    import { usePerformanceCoach } from "react-performance-coach";
 
     export default function ChatPage() {
-      usePerformanceCoach()
+      usePerformanceCoach();
       // ...
     }
     ```

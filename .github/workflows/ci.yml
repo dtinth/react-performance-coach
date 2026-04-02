@@ -10,39 +10,33 @@ on:
     branches:
       - main
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-20.04
+  check:
+    name: Check
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Check
+        run: vp run check
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
       - name: Setup
         uses: ./.github/actions/setup
       - name: Test
-        run: pnpm run test
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        if: env.SONAR_TOKEN
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  lint:
-    name: Lint
-    runs-on: ubuntu-20.04
+        run: vp run test
+  build:
+    name: Build
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
       - name: Setup
         uses: ./.github/actions/setup
-      - name: Lint
-        run: pnpm run format
-      - name: Lint
-        run: pnpm run api
-      - name: Stage changed files
-        run: git add --update
-      - name: Ensure no file is changed
-        uses: dtinth/patch-generator-action@v1
+      - name: Build
+        run: vp run build

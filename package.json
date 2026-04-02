@@ -1,37 +1,6 @@
 {
   "name": "react-performance-coach",
   "version": "1.1.0",
-  "scripts": {
-    "build": "heft build",
-    "test": "heft test",
-    "prepare": "heft build && ./scripts/generate-api-docs",
-    "release": "./scripts/release",
-    "format": "prettier --write .",
-    "api": "./scripts/generate-api-docs"
-  },
-  "files": [
-    "src",
-    "lib",
-    "lib-commonjs",
-    "dist"
-  ],
-  "main": "./lib-commonjs/index.js",
-  "module": "./lib/index.js",
-  "types": "./dist/react-performance-coach.d.ts",
-  "docModel": "./dist/react-performance-coach.api.json",
-  "devDependencies": {
-    "@changesets/cli": "2.25.0",
-    "@rushstack/heft": "0.48.7",
-    "@rushstack/heft-web-rig": "0.12.10",
-    "@types/heft-jest": "1.0.3",
-    "@types/node": "^18.7.16",
-    "@types/react": "^18.0.18",
-    "prettier": "2.7.1",
-    "react": ">=16.8.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0"
-  },
   "homepage": "https://github.com/dtinth/react-performance-coach#readme",
   "bugs": {
     "url": "https://github.com/dtinth/react-performance-coach/issues"
@@ -39,5 +8,39 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtinth/react-performance-coach.git"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "vp pack",
+    "test": "vp test",
+    "prepare": "vp config",
+    "release": "./scripts/release",
+    "format": "prettier --write .",
+    "api": "./scripts/generate-api-docs",
+    "dev": "vp pack --watch",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@types/node": "^24.12.0",
+    "@types/react": "^18.0.18",
+    "@typescript/native-preview": "7.0.0-dev.20260328.1",
+    "react": ">=16.8.0",
+    "vite-plus": "^0.1.14"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
   }
 }

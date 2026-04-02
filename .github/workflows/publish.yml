@@ -10,19 +10,27 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Setup
         uses: ./.github/actions/setup
+      - name: Configure Git user
+        run: |
+          git config --global user.name dtinth-bot
+          git config --global user.email dtinth-bot@users.noreply.github.com
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@2a025e8ab1cfa4312c2868cb6aa3cd3b473b84bf # v1.3.0
+        uses: changesets/action@v1
         with:
-          publish: pnpm run release
+          setupGitUser: false
+          publish: vp exec changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
